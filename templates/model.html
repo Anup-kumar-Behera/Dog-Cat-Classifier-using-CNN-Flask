@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload new File</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+      img{
+        height:200px; width: 200px;
+      }
+      .header{
+        margin-top:20px;
+        margin-bottom: 20px;
+        color: orange;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
+      <a class="navbar-brand" href="/">Dog and Cat Classifier Using CNN<span class="sr-only">(current)</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="model.html">Model</a>
+          </li>
+        </ul>
+       
+      </div>
+    </nav>
+    <div class="container" align = "center" style="margin-top: 100px;">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Layer(Type)</th>
+            <th scope="col">Output Shape</th>
+            <th scope="col">Param #</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>sequential_1 (Sequential)</td>
+            <td>(None, 180, 180, 3)</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td> rescaling_2 (Rescaling)</td> <td>     (None, 180, 180, 3)</td> <td>0 </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>conv2d_3 (Conv2D)</td>
+            <td>(None, 180, 180, 16)</td>
+            <td>448</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>max_pooling2d_3 (MaxPooling2)</td><td> (None, 90, 90, 16) </td>       <td>0</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>conv2d_4 (Conv2D) </td><td>           (None, 90, 90, 32) </td><td>       4640 </td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>max_pooling2d_4 (MaxPooling2) </td><td>(None, 45, 45, 32) </td><td>   0 </td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>conv2d_5 (Conv2D) </td><td>(None, 45, 45, 64) </td><td>18496 </td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+
+            <td>max_pooling2d_5 (MaxPooling2) </td><td>(None, 22, 22, 64) </td><td>0 </td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>dropout (Dropout) </td><td>(None, 22, 22, 64) </td><td>0 </td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>flatten_1 (Flatten) </td><td>(None, 30976) </td><td>0</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>dense_2 (Dense) </td><td>(None, 128) </td><td>3965056 </td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>dense_3 (Dense)</td><td>(None, 2) </td><td>258  </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
